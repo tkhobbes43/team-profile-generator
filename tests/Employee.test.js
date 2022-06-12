@@ -1,5 +1,8 @@
 const Employee = require("../lib/Employee");
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
+test("Ability to set name using contructor function", () => {
+    const name = "Naruto Uzumaki";
+    const employee = new Employee(name);
+    expect(employee.name).toBe(name);
 });
+
