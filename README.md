@@ -18,6 +18,8 @@ This will require Node.js as well as npm packages Jest and Inquirer.This app wil
 
 ## Usage
 Use inquirer from you command line to answer all of the questions about who is participating in your project.  Please see the below video walkthrough below.
+[Walkthrough Video](https://drive.google.com/file/d/1b30C6G612l0aFkmz4ycoqjO7F48KyXZZ/view)
+[Screenshot of created webpage](./assests/images/screenshot.PNG)
 
 ## Tests
 Jest was used for this app.  To run the test, it will be invoked by being in the direct after having downloaded Jest from npm and then using the command `npm run test`. 
