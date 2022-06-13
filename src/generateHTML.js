@@ -13,7 +13,7 @@ const generateManager = function(manager) {
             <li class="list-group-item border">Office Number: ${manager.officeNumber}</li>
         </ul>
     </div>
-    `;
+    `;    
 }
 
 // engineer card
@@ -27,7 +27,7 @@ const generateEngineer = function(engineer) {
         <ul class="list-group list-group-flush p-4">
             <li class="list-group-item border">ID: ${engineer.id}</li>
             <li class="list-group-item border">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
-            <li class="list-group-item border">Github: <a href="https://github.com/${engineer.gitHub}">${engineer.github}</a></li>
+            <li class="list-group-item border">Github: <a href="https://github.com/${engineer.gitHub}">${engineer.gitHub}</a></li>
         </ul>
     </div>
     `;
@@ -44,7 +44,7 @@ const generateIntern = function(intern) {
         <ul class="list-group list-group-flush p-4">
             <li class="list-group-item border">ID: ${intern.id}</li>
             <li class="list-group-item border">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
-            <li class="list-group-item border">School: ${intern.school}/li>
+            <li class="list-group-item border">School: ${intern.school}</li>
         </ul>
     </div>
     `;
@@ -92,7 +92,6 @@ return`
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/212accd078.js" crossorigin="anonymous"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Courgette&display=swap" rel="stylesheet">
@@ -104,9 +103,9 @@ return`
         <h1><strong>My Team</strong></h1>
     </header>
     <main>
-        <div class = "card-deck">
+        <div class ="card-group">
             <div class="card">
-            ${employeeCards}
+                ${employeeCards}
             </div>
         </div>
     </main>       
