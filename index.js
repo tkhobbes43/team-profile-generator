@@ -14,20 +14,17 @@ const Intern = require("./lib/Intern");
 // team array built up from user's input
 const myEmployees = [];
 
-// help from tutor on how path I can take to execute all of this
-// const newIntern = new Intern ("Mike", 123, "test@test.test", "Rice");
-// const newManager = new Manager ("Bike", 123, "test@test.test", 432);
-// myEmployees.push(newIntern);
-// myEmployees.push(newManager);
+// want first prompt to be for the manager, so that they can input their info and then build up their team with the rest of the prompts
+const addManager = () => {
+    return inquirer.prompt ([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Who is the manager of the team?'
+        },
+        {
+            type: 'input',
+        }
 
-// myEmployees.forEach(employee => {
-//     console.log(employee.getRole())
-//     if(employee.getRole() == "Intern"){
-//         //maybe run a function that builds a template for interns
-//         console.log("I'm an intern, here is my school:")
-//         console.log(employee.getSchool())
-//     }else {
-//         console.log("manager here:")
-//         console.log(employee.getOfficeNumber())
-//     }
-// })
+    ])
+}
