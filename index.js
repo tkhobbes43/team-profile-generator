@@ -71,7 +71,30 @@ const addEmployee = () => {
             name: 'id',
             message: "Please enter the employee's ID."
         },
-        
+        {
+            type: 'input',
+            name: 'email',
+            message: "Please enter employee's email."
+        },
+        {
+            type: 'input',
+            name: 'gitHub',
+            message: "Please enter the employee's github username.",
+            when: (input) => input.role === "Engineer",
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: "Please enter the intern's school.",
+            when: (input) => input.role === "Intern",
+        }
+        {
+            type: 'confirm',
+            name: 'confirmAddeEmployee',
+            message: 'Would you like to add more team members?',
+            default: false
+        }
     ])
+    .then
 }
 addManager()
