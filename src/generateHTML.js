@@ -5,7 +5,7 @@ const generateManager = function(manager) {
     <div class="card border" style="width: 18rem;">
         <div class="card-body card text-white bg-primary mb-3">
             <h5 class="card-title">${manager.name}</h5>
-            <p class="card-text">Manager</p>
+            <p class="card-text"><i class="fa-regular fa-brain-circuit"></i>Manager</p>
         </div>
         <ul class="list-group list-group-flush p-4">
             <li class="list-group-item border">ID: ${manager.id}</li>
@@ -22,7 +22,7 @@ const generateEngineer = function(engineer) {
     <div class="card border" style="width: 18rem;">
         <div class="card-body card text-white bg-primary mb-3">
             <h5 class="card-title">${engineer.name}</h5>
-            <p class="card-text">Manager</p>
+            <p class="card-text"><i class="fa-regular fa-screwdriver-wrench"></i>Engineer</p>
         </div>
         <ul class="list-group list-group-flush p-4">
             <li class="list-group-item border">ID: ${engineer.id}</li>
@@ -39,7 +39,7 @@ const generateIntern = function(intern) {
     <div class="card border" style="width: 18rem;">
         <div class="card-body card text-white bg-primary mb-3">
             <h5 class="card-title">${intern.name}</h5>
-            <p class="card-text">Manager</p>
+            <p class="card-text"><i class="fa-regular fa-graduation-cap"></i>Intern</p>
         </div>
         <ul class="list-group list-group-flush p-4">
             <li class="list-group-item border">ID: ${intern.id}</li>
@@ -98,17 +98,18 @@ return`
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Team Profile</title>
 </head>
-    <body>
-        <header style="color:white;background-color:red;text-align:center;">
-            <h1><strong>My Team</strong></h1>
-        </header>
-        <main>
-            <div class = "card-deck">
-                <div class="card">
-                ${employeeCards}
-                </div>
+<body>
+    <header style="color:white;background-color:red;text-align:center;">
+        <h1><strong>My Team</strong></h1>
+    </header>
+    <main>
+        <div class = "card-deck">
+            <div class="card">
+            ${employeeCards}
             </div>
-        </main>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/212accd078.js" crossorigin="anonymous"></script>    
 </body>
 </html>
 `;
