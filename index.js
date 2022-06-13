@@ -133,3 +133,13 @@ const writeFile = date => {
 };
 
 addManager()
+    .then(addEmployee)
+    .then(myEmployees => {
+        return generateHTML(myEmployees);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.log(err);
+    });

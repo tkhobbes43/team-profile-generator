@@ -84,7 +84,7 @@ generateHTML = (data) => {
 }
 
 // will generate the HTML page
-const generateTeamProfiles = function() {
+const generateTeamProfiles = function(employeeCards) {
 return`
 <!DOCTYPE html>
 <html lang="en">
