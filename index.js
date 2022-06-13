@@ -24,7 +24,27 @@ const addManager = () => {
         },
         {
             type: 'input',
+            name: 'id',
+            message: "Please enter the manager's ID.",
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: "Please enter the manager's email."
+        },
+        {
+            type: 'input',
+            name: 'officeNumber',
+            message: "Please enter the manager's office number."
         }
-
     ])
-}
+    .then(managerInput => {
+        const { name, id, email, officeNumber } = managerInput;
+        const manager = new Manager (name, id, email, officeNumber);
+
+        myEmployees.push(manager);
+        console.log(manager);
+    })
+};
+
+addManager()

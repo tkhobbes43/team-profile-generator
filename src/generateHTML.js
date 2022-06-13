@@ -72,7 +72,7 @@ generateHTML = (data) => {
         }
 
         // call intern function
-        (role ==='Intern') {
+        if (role ==='Intern') {
             const internCard = generateIntern(employee);
             pageArray.push(internCard);
         }
