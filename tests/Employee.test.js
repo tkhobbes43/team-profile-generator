@@ -1,5 +1,11 @@
 const Employee = require("../lib/Employee");
 
+test("When creating a new instance of Data it is of object type", () => {
+    // const name = "Naruto Uzumaki";
+    const employee = new Employee();
+    expect(typeof(employee)).toBe("object");
+});
+
 test("Ability to set name using contructor function, so getName() should return name", () => {
     const name = "Naruto Uzumaki";
     const employee = new Employee(name, "1", "naruto.uzumaki@hiddenleaf.com");
