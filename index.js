@@ -119,7 +119,7 @@ const addEmployee = () => {
 };
 
 // function to actually generate the HTML page using fs
-const writeFile = date => {
+const writeFile = data => {
     fs.writeFile('./dist/index.html', data, err => {
         // if there is an error
         if (err) {
