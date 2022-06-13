@@ -2,6 +2,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+// linking generateHTML.js to create the mark up
+const generateHTML = require("./src/generateHTML");
+
 // team profiles
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");

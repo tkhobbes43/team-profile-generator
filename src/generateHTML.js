@@ -75,3 +75,5 @@ const generateTeamProfiles = function() {
 </html>
     `;
 }
+
+module.exports = generateHTML;
