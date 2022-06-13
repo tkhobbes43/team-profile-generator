@@ -4,7 +4,7 @@
 
 ## Description
 
-THis is a Node.js command-line app that will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person.
+This is a Node.js command-line app that will take in information about employees on a software engineering team: manager, engineers, and interns, then dynamically generates an HTML webpage that displays summaries for each of these people.
 
 ## Table of Contents
 - [Description](#description)
@@ -15,10 +15,10 @@ THis is a Node.js command-line app that will take in information about employees
 - [Questions](#questions)
 
 ## Installation
-This will require npm packages Jest and Inquirer and this app will be invoked by using the 'node index.js' command.
+This will require Node.js as well as npm packages Jest and Inquirer.This app will be invoked by using the 'node index.js' command.
 
 ## Usage
-This generator app is perfect for you to create a profile of your team with all of their info.
+Use inquirer from you command line to answer all of the questions about who is participating in your project.  Please see the below video walkthrough below.
 
 ## Tests
 Jest was used for this app.  To run the test, it will be invoked by being in the direct after having downloaded Jest from npm and then using the command 'npm run test.' 
