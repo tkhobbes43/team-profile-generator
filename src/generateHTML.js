@@ -13,7 +13,7 @@ const generateManager = function(manager) {
             <li class="list-group-item border">Office Number: ${manager.officeNumber}</li>
         </ul>
     </div>
-    `;    
+    `; 
 }
 
 // engineer card
@@ -85,33 +85,33 @@ generateHTML = (data) => {
 
 // will generate the HTML page
 const generateTeamProfiles = function(employeeCards) {
-return`
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Courgette&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Team Profile</title>
-</head>
-<body>
-    <header style="color:white;background-color:red;text-align:center;">
-        <h1><strong>My Team</strong></h1>
-    </header>
-    <main>
-        <div class ="card-group">
-            <div class="card">
-                ${employeeCards}
+    return`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Courgette&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <title>Team Profile</title>
+    </head>
+    <body>
+        <header style="color:white;background-color:red;text-align:center;">
+            <h1><strong>My Team</strong></h1>
+        </header>
+        <main>
+            <div class ="card-group">
+                <div class="card">
+                    ${employeeCards}
+                </div>
             </div>
-        </div>
-    </main>       
-</body>
-</html>
-`;
+        </main>       
+    </body>
+    </html>
+    `;
 }
 
 module.exports = generateHTML;
