@@ -38,7 +38,9 @@ const addManager = () => {
             message: "Please enter the manager's office number."
         }
     ])
+    // thenifying data from prompts to push into employee constructor functions, to them push into myEmployees array
     .then(managerInput => {
+        // destructuring used
         const { name, id, email, officeNumber } = managerInput;
         const manager = new Manager (name, id, email, officeNumber);
 
@@ -87,14 +89,47 @@ const addEmployee = () => {
             name: 'school',
             message: "Please enter the intern's school.",
             when: (input) => input.role === "Intern",
-        }
+        },
         {
             type: 'confirm',
-            name: 'confirmAddeEmployee',
+            name: 'confirmAddEmployee',
             message: 'Would you like to add more team members?',
             default: false
         }
     ])
-    .then
-}
+    // thenifying data from prompts for either engineer or internand then push into employee constructor functions, to them push into myEmployees array
+    .then(employeeData => {
+        // data for the employee types using destructuring
+        let { name, id, email, role, gitHub, school, confirmAddEmployee } = employeeData;
+        let employee;
+        if (role === "Engineer") {
+            employee = new Engineer (name, id, email, gitHub);
+            console.log(employee);
+        } else if (role === "Intern") {
+            employee = new Intern (name, id, email, school);
+            console.log(employee);
+        }
+        myEmployees.push(employee);
+        if (confirmAddEmployee) {
+            return addEmployee(myEmployees);
+        } else {
+            return myEmployees;
+        }
+    })
+};
+
+// function to actually generate the HTML page using fs
+const writeFile = date => {
+    fs.writeFile('./dist/index.html', data, err => {
+        // if there is an error
+        if (err) {
+            console.log(err);
+            return;
+            // when the profile has been created
+        } else {
+            console.log("Your team profile has been successfully created! Please checkout the dynamically created index.html!")
+        }
+    })
+};
+
 addManager()
