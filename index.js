@@ -47,4 +47,31 @@ const addManager = () => {
     })
 };
 
+const addEmployee = () => {
+    console.log(`
+    =====================
+    Adding employees to the team
+    =====================
+    `);
+
+    return inquirer.prompt ([
+        {
+            type: 'list',
+            name: 'role',
+            message: "Please choose a role for your employee.",
+            choices: ['Engineer', 'Intern']
+        },
+        {
+            type: 'input',
+            name: 'name',
+            message: "What is the name of the employee?"
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: "Please enter the employee's ID."
+        },
+        
+    ])
+}
 addManager()

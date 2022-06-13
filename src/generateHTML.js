@@ -5,7 +5,7 @@ const generateManager = function(manager) {
     <div class="card border" style="width: 18rem;">
         <div class="card-body card text-white bg-primary mb-3">
             <h5 class="card-title">${manager.name}</h5>
-            <p class="card-text"><i class="fa-regular fa-brain-circuit"></i>Manager</p>
+            <p class="card-text">Manager</p>
         </div>
         <ul class="list-group list-group-flush p-4">
             <li class="list-group-item border">ID: ${manager.id}</li>
@@ -22,7 +22,7 @@ const generateEngineer = function(engineer) {
     <div class="card border" style="width: 18rem;">
         <div class="card-body card text-white bg-primary mb-3">
             <h5 class="card-title">${engineer.name}</h5>
-            <p class="card-text"><i class="fa-regular fa-screwdriver-wrench"></i>Engineer</p>
+            <p class="card-text">Engineer</p>
         </div>
         <ul class="list-group list-group-flush p-4">
             <li class="list-group-item border">ID: ${engineer.id}</li>
@@ -39,7 +39,7 @@ const generateIntern = function(intern) {
     <div class="card border" style="width: 18rem;">
         <div class="card-body card text-white bg-primary mb-3">
             <h5 class="card-title">${intern.name}</h5>
-            <p class="card-text"><i class="fa-regular fa-graduation-cap"></i>Intern</p>
+            <p class="card-text">Intern</p>
         </div>
         <ul class="list-group list-group-flush p-4">
             <li class="list-group-item border">ID: ${intern.id}</li>
@@ -92,6 +92,7 @@ return`
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/212accd078.js" crossorigin="anonymous"></script> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Courgette&display=swap" rel="stylesheet">
@@ -108,8 +109,7 @@ return`
             ${employeeCards}
             </div>
         </div>
-    </main>
-    <script src="https://kit.fontawesome.com/212accd078.js" crossorigin="anonymous"></script>    
+    </main>       
 </body>
 </html>
 `;

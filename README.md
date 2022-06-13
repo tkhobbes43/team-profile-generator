@@ -10,7 +10,6 @@ This is a Node.js command-line app that will take in information about employees
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
 - [Tests](#tests)
 - [Questions](#questions)
 
