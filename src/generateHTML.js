@@ -54,7 +54,7 @@ generateHTML = (data) => {
     // array for the cards
     pageArray = [];
     // for loop to iterate through data for all the employees and their roles
-    for (let i = 0, i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
         const employee = data[i];
         const role = employee.getRole();
         
@@ -77,16 +77,16 @@ generateHTML = (data) => {
             pageArray.push(internCard);
         }
     }
-
-    
+    const employeeCards = pageArray.join('')
+    // return to generated page
+    const generateTeam = generateTeamProfiles(employeeCards);
+    return generateTeam;
 }
 
-
-
-
+// will generate the HTML page
 const generateTeamProfiles = function() {
-    return`
-    <!DOCTYPE html>
+return`
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -96,13 +96,22 @@ const generateTeamProfiles = function() {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Courgette&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Team Profile</title>
 </head>
-<body>
-    
+    <body>
+        <header style="color:white;background-color:red;text-align:center;">
+            <h1><strong>My Team</strong></h1>
+        </header>
+        <main>
+            <div class = "card-deck">
+                <div class="card">
+                ${employeeCards}
+                </div>
+            </div>
+        </main>
 </body>
 </html>
-    `;
+`;
 }
 
 module.exports = generateHTML;
