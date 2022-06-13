@@ -1,6 +1,6 @@
 // create cards for each type of employee, and then using const myEmployees from index.js 
 // manager card
-const generateManger = function(manager) {
+const generateManager = function(manager) {
     return `
     <div class="card border" style="width: 18rem;">
         <div class="card-body card text-white bg-primary mb-3">
@@ -34,7 +34,7 @@ const generateEngineer = function(engineer) {
 }
 
 // intern card
-const generateInter = function(intern) {
+const generateIntern = function(intern) {
     return `
     <div class="card border" style="width: 18rem;">
         <div class="card-body card text-white bg-primary mb-3">
@@ -50,7 +50,36 @@ const generateInter = function(intern) {
     `;
 }
 
+generateHTML = (data) => {
+    // array for the cards
+    pageArray = [];
+    // for loop to iterate through data for all the employees and their roles
+    for (let i = 0, i < data.length; i++) {
+        const employee = data[i];
+        const role = employee.getRole();
+        
+        // using conditionals within for loop to call either manager, engineer, or intern functions above
+        // first is to call manager and push it into an pageArray 
+        if (role ==='Manager') {
+            const managerCard = generateManager(employee);
+            pageArray.push(managerCard);
+        }
 
+        // call engineer function
+        if (role ==='Engineer') {
+            const engineerCard = generateEngineer(employee);
+            pageArray.push(engineerCard);
+        }
+
+        // call intern function
+        (role ==='Intern') {
+            const internCard = generateIntern(employee);
+            pageArray.push(internCard);
+        }
+    }
+
+    
+}
 
 
 
