@@ -1,5 +1,54 @@
 // create cards for each type of employee, and then using const myEmployees from index.js 
+// manager card
+const generateManger = function(manager) {
+    return `
+    <div class="card border" style="width: 18rem;">
+        <div class="card-body card text-white bg-primary mb-3">
+            <h5 class="card-title">${manager.name}</h5>
+            <p class="card-text">Manager</p>
+        </div>
+        <ul class="list-group list-group-flush p-4">
+            <li class="list-group-item border">ID: ${manager.id}</li>
+            <li class="list-group-item border">Email: <a href="mailto:${manager.email}">${manager.email}</a></li>
+            <li class="list-group-item border">Office Number: ${manager.officeNumber}</li>
+        </ul>
+    </div>
+    `;
+}
 
+// engineer card
+const generateEngineer = function(engineer) {
+    return `
+    <div class="card border" style="width: 18rem;">
+        <div class="card-body card text-white bg-primary mb-3">
+            <h5 class="card-title">${engineer.name}</h5>
+            <p class="card-text">Manager</p>
+        </div>
+        <ul class="list-group list-group-flush p-4">
+            <li class="list-group-item border">ID: ${engineer.id}</li>
+            <li class="list-group-item border">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></li>
+            <li class="list-group-item border">Github: <a href="https://github.com/${engineer.gitHub}">${engineer.github}</a></li>
+        </ul>
+    </div>
+    `;
+}
+
+// intern card
+const generateInter = function(intern) {
+    return `
+    <div class="card border" style="width: 18rem;">
+        <div class="card-body card text-white bg-primary mb-3">
+            <h5 class="card-title">${intern.name}</h5>
+            <p class="card-text">Manager</p>
+        </div>
+        <ul class="list-group list-group-flush p-4">
+            <li class="list-group-item border">ID: ${intern.id}</li>
+            <li class="list-group-item border">Email: <a href="mailto:${intern.email}">${intern.email}</a></li>
+            <li class="list-group-item border">School: ${intern.school}/li>
+        </ul>
+    </div>
+    `;
+}
 
 
 
